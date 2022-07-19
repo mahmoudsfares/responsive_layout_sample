@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_layout_sample/login/fragments/background_separator.dart';
 import 'package:responsive_layout_sample/login/fragments/my_app_bar.dart';
 import 'package:responsive_layout_sample/login/fragments/submit_button.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -15,42 +16,41 @@ class LoginScreen extends StatelessWidget {
           BackgroundSeparator(separator: 'resources/images/img_login.png'),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.w),
               color: Colors.white,
               child: Form(
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(32, 0, 32, 8),
-                          child: TextFormField(
-                            cursorColor: Colors.deepPurpleAccent,
-                            decoration: const InputDecoration(
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.deepPurpleAccent),
-                              ),
-                              labelText: 'Username',
-                              labelStyle: TextStyle(color: Colors.grey),
+                        TextFormField(
+                          style: TextStyle(fontSize: 18.sp),
+                          cursorColor: Colors.deepPurpleAccent,
+                          decoration: InputDecoration(
+                            focusedBorder: const UnderlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.deepPurpleAccent),
                             ),
+                            labelText: 'Username',
+                            labelStyle: TextStyle(color: Colors.grey, fontSize: 18.sp),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                          child: TextFormField(
-                            cursorColor: Colors.deepPurpleAccent,
-                            decoration: const InputDecoration(
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Colors.deepPurpleAccent),
+                        SizedBox(height: 1.5.h),
+                        TextFormField(
+                          style: TextStyle(fontSize: 18.sp),
+                          cursorColor: Colors.deepPurpleAccent,
+                          decoration: InputDecoration(
+                            focusedBorder: const UnderlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.deepPurpleAccent),
+                            ),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(color: Colors.grey, fontSize: 18.sp),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                  Icons.visibility,
+                                size: 4.h,
                               ),
-                              labelText: 'Password',
-                              labelStyle: TextStyle(color: Colors.grey),
-                              suffixIcon: IconButton(
-                                icon: Icon(
-                                    Icons.visibility
-                                ),
-                                color: Colors.grey, onPressed: null,
-                              ),
+                              color: Colors.grey, onPressed: null,
                             ),
                           ),
                         ),

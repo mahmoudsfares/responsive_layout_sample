@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({Key? key})
@@ -20,7 +21,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         statusBarBrightness: Brightness.light, // For iOS
       ),
       centerTitle: true,
-      title: const Text('Responsive Sample'),
+      title: Text('Responsive Sample', style: TextStyle(fontSize: 20.sp),),
       elevation: 0,
       backgroundColor: Colors.deepPurpleAccent,
     );

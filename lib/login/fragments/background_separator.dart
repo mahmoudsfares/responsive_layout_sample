@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class BackgroundSeparator extends StatelessWidget {
 
@@ -8,29 +9,25 @@ class BackgroundSeparator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height / 4,
+    return Container(
+      height: Device.screenType == ScreenType.mobile ? 20.h : 30.h,
+      color: Colors.deepPurpleAccent,
       child: Stack(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 4.1,
-            color: Colors.deepPurpleAccent,
-          ),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Image.asset(separator, width: MediaQuery.of(context).size.width, fit: BoxFit.fitWidth,)),
-          const Align(
-            alignment: Alignment(0, 0.4),
-            child: Text(
-              'Login',
-              style: TextStyle(
-                fontSize: 20,
+        Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(separator, width: 100.w, fit: BoxFit.fitWidth,)),
+        Align(
+          alignment: Alignment(0.w, 0.05.h),
+          child: Text(
+            'Login',
+            style: TextStyle(
+                fontSize: 20.sp,
                 color: Colors.deepPurpleAccent,
                 fontWeight: FontWeight.bold
-              ),
             ),
           ),
+        ),
         ],
       ),
     );

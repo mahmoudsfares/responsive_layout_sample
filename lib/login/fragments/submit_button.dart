@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SubmitButton extends StatelessWidget {
   final String text;
@@ -14,12 +15,12 @@ class SubmitButton extends StatelessWidget {
           Row(children: [
             Expanded(
               child: SizedBox(
-                height: 48,
+                height: 7.h,
                 child: ElevatedButton(
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
+                      borderRadius: BorderRadius.circular(18.0.h),
                     )),
                     backgroundColor: MaterialStateProperty.all(
                       Colors.deepPurpleAccent,
@@ -28,7 +29,7 @@ class SubmitButton extends StatelessWidget {
                   onPressed: null,
                   child: Text(
                     text,
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 20.sp),
                   ),
                 ),
               ),
