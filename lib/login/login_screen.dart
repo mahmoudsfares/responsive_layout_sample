@@ -54,6 +54,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(height: Device.screenType == ScreenType.mobile ? 1.h : 2.h),
                         const SubmitButton('LOGIN'),
                       ],
                     ),
