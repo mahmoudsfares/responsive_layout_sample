@@ -29,7 +29,7 @@ class SubmitButton extends StatelessWidget {
                   onPressed: null,
                   child: Text(
                     text,
-                    style: TextStyle(color: Colors.white, fontSize: 0.2.dp),
+                    style: TextStyle(color: Colors.white, fontSize: 18.sp),
                   ),
                 ),
               ),

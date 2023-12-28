@@ -19,9 +19,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         statusBarBrightness: Brightness.light, // For iOS
       ),
       centerTitle: true,
-      title: Text('Responsive Sample', style: TextStyle(fontSize: 20.sp)),
-      elevation: 10,
-      backgroundColor: Colors.green,
+      title: Text('Responsive Sample', style: TextStyle(fontSize: 20.sp, color: Colors.white)),
+      elevation: 0,
+      backgroundColor: Colors.deepPurpleAccent,
     );
   }
 }

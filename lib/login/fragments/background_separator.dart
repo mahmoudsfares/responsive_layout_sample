@@ -10,7 +10,7 @@ class BackgroundSeparator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 25.h,
+      height: 20.h,
       child: Column(
         children: [
           Expanded(
@@ -25,11 +25,11 @@ class BackgroundSeparator extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Image.asset(separator, width: 100.w, fit: BoxFit.fitWidth,)),
                 Align(
-                  alignment: Alignment(0, 0.4),
+                  alignment: const Alignment(0, 0.5),
                   child: Text(
                     'Login',
                     style: TextStyle(
-                      fontSize: 0.28.dp,
+                      fontSize: 20.sp,
                       color: Colors.deepPurpleAccent,
                       fontWeight: FontWeight.bold
                     ),
@@ -38,7 +38,6 @@ class BackgroundSeparator extends StatelessWidget {
               ],
             ),
           ),
-          Divider(thickness: 2, height: 5,)
         ],
       ),
     );
