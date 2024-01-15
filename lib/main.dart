@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(
-      builder: (a, b, c) => MaterialApp(
+      builder: (BuildContext context, Orientation b, ScreenType c) => MaterialApp(
         home: LoginScreen(),
       ),
     );
