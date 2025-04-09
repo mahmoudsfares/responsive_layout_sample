@@ -15,7 +15,7 @@ class BackgroundSeparator extends StatelessWidget {
           Container(color: Colors.deepPurpleAccent),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Image.asset(separatorImage, width: 100.w, fit: BoxFit.fitWidth),
+            child: Image.asset(separatorImage, width: double.maxFinite, fit: BoxFit.fitWidth),
           ),
           Align(
             alignment: Alignment(0.w, 0.05.h),
@@ -23,7 +23,7 @@ class BackgroundSeparator extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(color: Colors.white, height: 2),
+            child: Container(color: Colors.white, height: 1.h),
           )
         ],
       ),

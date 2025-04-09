@@ -4,7 +4,7 @@ import 'package:responsive_layout_sample/login/login_screen.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 void main() {
-  runApp(DevicePreview(enabled: true, builder: (context) => MyApp()));
+  runApp(DevicePreview(enabled: true, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(
-      builder: (BuildContext context, Orientation b, ScreenType c) => MaterialApp(
+      builder: (BuildContext context, Orientation b, ScreenType c) => const MaterialApp(
         home: LoginScreen(),
       ),
     );
