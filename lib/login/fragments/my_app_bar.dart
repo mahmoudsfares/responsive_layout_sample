@@ -13,9 +13,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       systemOverlayStyle: const SystemUiOverlayStyle(
-        // Status bar color
         statusBarColor: Colors.transparent,
-        // Status bar icons brightness (optional)
         statusBarIconBrightness: Brightness.light, // For Android
         statusBarBrightness: Brightness.light, // For iOS
       ),

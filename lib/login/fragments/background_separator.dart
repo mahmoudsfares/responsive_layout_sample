@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BackgroundSeparator extends StatelessWidget {
 
-  String separator;
+  final String separator;
 
-  BackgroundSeparator({required this.separator, Key? key}) : super(key: key);
+  const BackgroundSeparator({required this.separator, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 4,
+      height: 200.h,
       child: Stack(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 4.1,
+            width: double.maxFinite,
+            height: 200.h,
             color: Colors.deepPurpleAccent,
           ),
           Align(
               alignment: Alignment.bottomCenter,
-              child: Image.asset(separator, width: MediaQuery.of(context).size.width, fit: BoxFit.fitWidth,)),
-          const Align(
-            alignment: Alignment(0, 0.4),
+              child: Image.asset(
+                separator,
+                width: double.maxFinite,
+                fit: BoxFit.fitWidth,
+              )),
+          Align(
+            alignment: const Alignment(0, 0.4),
             child: Text(
               'Login',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.deepPurpleAccent,
-                fontWeight: FontWeight.bold
-              ),
+              style: TextStyle(fontSize: 20.sp, color: Colors.deepPurpleAccent, fontWeight: FontWeight.bold),
             ),
           ),
         ],

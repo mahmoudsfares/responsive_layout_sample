@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_layout_sample/login/fragments/background_separator.dart';
 import 'package:responsive_layout_sample/login/fragments/my_app_bar.dart';
 import 'package:responsive_layout_sample/login/fragments/submit_button.dart';
 
 class LoginScreen extends StatelessWidget {
+
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class LoginScreen extends StatelessWidget {
       appBar: const MyAppBar(),
       body: Column(
         children: [
-          BackgroundSeparator(separator: 'resources/images/img_login.png'),
+          const BackgroundSeparator(separator: 'resources/images/img_login.png'),
           Expanded(
             child: Container(
               color: Colors.white,
@@ -21,7 +24,7 @@ class LoginScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(32, 0, 32, 8),
+                          padding: EdgeInsets.fromLTRB(32.w, 0.h, 32.w, 8.h),
                           child: TextFormField(
                             cursorColor: Colors.deepPurpleAccent,
                             decoration: const InputDecoration(
@@ -35,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+                          padding: EdgeInsets.symmetric(horizontal: 32.w, vertical:  0.w),
                           child: TextFormField(
                             cursorColor: Colors.deepPurpleAccent,
                             decoration: const InputDecoration(
